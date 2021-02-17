@@ -2,23 +2,21 @@
 title: "Assignment-5"
 author: "Sara Faiad"
 date: "2/17/2021"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 # Assignment 5 - Creating an expository figure
 
 ## Getting the Data 
 
 I created a data folder locally and downloaded "siscowet.csv". 
 
-```
+```{r getting_data}
 # Reading in the data 
 
 siscowet<- read.csv("data/siscowet.csv")
-
 
 # Checking things out 
 
@@ -27,7 +25,7 @@ head(siscowet)
 
 ## The Plot - Exploratory 
 
-```
+```{r exploratory_plot}
 # load ggplot2
 
 library(ggplot2)
@@ -35,18 +33,17 @@ library(ggplot2)
 
 # A basic scatterplot showing the relationship between len and age. Points are colored depending on locID. 
 
-ggplot(siscowet, aes(x=age, y=len, color=locID)) + 
+ggplot(data = siscowet, aes(x=age, y=len, color=locID)) + 
     geom_point(size=6) 
 ```
 
 That looks pretty bad, but it's a start. Time to refine. 
 
-## Refining the Plot - Expository
+## Refining the Plot - Expository 1.0
 
-```
+```{r expository_plot_1.0}
 #PNW color pallette (because I love living in the PNW)
 
-install.packages("PNWColors")
 library(PNWColors)
 
 #Building a scatterplot 
@@ -75,7 +72,7 @@ Better, but still not great. Many of the points overlap and adding some transper
 
 ## Violin Plot - Expository 2.0
 
-```
+```{r expository_plot_2.0}
 library(dplyr)
 
 ggplot(data = siscowet, 
