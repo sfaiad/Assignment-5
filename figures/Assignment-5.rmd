@@ -3,8 +3,8 @@ title: "Assignment-5"
 author: "Sara Faiad"
 date: "2/17/2021"
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 
 # Assignment 5 - Creating an expository figure

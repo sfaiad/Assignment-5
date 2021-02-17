@@ -1,0 +1,264 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Assignment-5},
+  pdfauthor={Sara Faiad},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\title{Assignment-5}
+\author{Sara Faiad}
+\date{2/17/2021}
+
+\begin{document}
+\maketitle
+
+\hypertarget{assignment-5---creating-an-expository-figure}{%
+\section{Assignment 5 - Creating an expository
+figure}\label{assignment-5---creating-an-expository-figure}}
+
+\hypertarget{getting-the-data}{%
+\subsection{Getting the Data}\label{getting-the-data}}
+
+I created a data folder locally and downloaded ``siscowet.csv''.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Reading in the data }
+
+\NormalTok{siscowet<-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(}\StringTok{"data/siscowet.csv"}\NormalTok{)}
+
+\CommentTok{# Checking things out }
+
+\KeywordTok{head}\NormalTok{(siscowet)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##       locID pnldep mesh fishID  sex age len  wgt
+## 1 Deer Park  36.74  2.5  19108 <NA>  NA 316  400
+## 2 Deer Park  40.09  3.0  19109 <NA>  NA 396  700
+## 3 Deer Park  41.46  5.0  19110    M  NA 590 1800
+## 4 Deer Park  41.46  5.0  19111    M  NA 516 1500
+## 5 Deer Park  43.45  5.5  19112 <NA>  NA 414  800
+## 6 Deer Park  45.58  4.0  19113    M  NA 481 1000
+\end{verbatim}
+
+\hypertarget{the-plot---exploratory}{%
+\subsection{The Plot - Exploratory}\label{the-plot---exploratory}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# load ggplot2}
+
+\KeywordTok{library}\NormalTok{(ggplot2)}
+
+
+\CommentTok{# A basic scatterplot showing the relationship between len and age. Points are colored depending on locID. }
+
+\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ siscowet, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{age, }\DataTypeTok{y=}\NormalTok{len, }\DataTypeTok{color=}\NormalTok{locID)) }\OperatorTok{+}\StringTok{ }
+\StringTok{    }\KeywordTok{geom_point}\NormalTok{(}\DataTypeTok{size=}\DecValTok{6}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: Removed 580 rows containing missing values (geom_point).
+\end{verbatim}
+
+\includegraphics{Assignment-5_files/figure-latex/exploratory_plot-1.pdf}
+
+That looks pretty bad, but it's a start. Time to refine.
+
+\hypertarget{refining-the-plot---expository-1.0}{%
+\subsection{Refining the Plot - Expository
+1.0}\label{refining-the-plot---expository-1.0}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{#PNW color pallette (because I love living in the PNW)}
+
+\KeywordTok{library}\NormalTok{(PNWColors)}
+
+\CommentTok{#Building a scatterplot }
+
+\NormalTok{siscowet_expository_plot<-}\StringTok{ }\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ siscowet, }
+       \KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ age, }
+       \DataTypeTok{y=}\NormalTok{ len)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_point}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{color =}\NormalTok{ locID, }
+                 \DataTypeTok{shape =}\NormalTok{ locID, }
+                 \DataTypeTok{alpha =}\NormalTok{ locID),}
+             \DataTypeTok{size =} \DecValTok{3}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{scale_color_manual}\NormalTok{(}\DataTypeTok{values =} \KeywordTok{pnw_palette}\NormalTok{(}\StringTok{"Cascades"}\NormalTok{,}\DecValTok{4}\NormalTok{)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{title =} \StringTok{"Siscowet Lake Trout from Michigan waters of Lake Superior"}\NormalTok{,}
+       \DataTypeTok{subtitle =} \StringTok{"Length and weight from four locations: Blind Sucker, Deer Park, Grand Marais, and  Little Lack Harbor"}\NormalTok{,}
+       \DataTypeTok{x =} \StringTok{"Assigned Ages (years)"}\NormalTok{,}
+       \DataTypeTok{y =} \StringTok{"Total Length (mm)"}\NormalTok{,}
+       \DataTypeTok{color =} \StringTok{"Location ID"}\NormalTok{,}
+       \DataTypeTok{shape =} \StringTok{"Location ID"}\NormalTok{, }
+       \DataTypeTok{alpha =} \StringTok{"Location ID"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme_classic}\NormalTok{()}
+
+\NormalTok{siscowet_expository_plot}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: Using alpha for a discrete variable is not advised.
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: Removed 580 rows containing missing values (geom_point).
+\end{verbatim}
+
+\includegraphics{Assignment-5_files/figure-latex/expository_plot_1.0-1.pdf}
+
+Better, but still not great. Many of the points overlap and adding some
+transperancy to the points doesn't really help matters. Additionally,
+the colors are not colorblind friendly. I'm going to switch up tactics
+and attempt a violin plot.
+
+\hypertarget{violin-plot---expository-2.0}{%
+\subsection{Violin Plot - Expository
+2.0}\label{violin-plot---expository-2.0}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(dplyr)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'dplyr'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ siscowet, }
+       \KeywordTok{aes}\NormalTok{(}\DataTypeTok{fill =}\NormalTok{ sex, }\DataTypeTok{y =}\NormalTok{ len, }\DataTypeTok{x =}\NormalTok{ locID)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_violin}\NormalTok{(}\DataTypeTok{position=}\StringTok{"dodge"}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{title=}\StringTok{"Siscowet Lake Trout from Michigan waters of Lake Superior"}\NormalTok{,}
+       \DataTypeTok{x=}\StringTok{"Location ID"}\NormalTok{, }
+       \DataTypeTok{y =} \StringTok{"Total Length (mm)"}\NormalTok{,}
+       \DataTypeTok{color =} \StringTok{"Sex"}\NormalTok{) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{scale_fill_manual}\NormalTok{(}\DataTypeTok{values =} \KeywordTok{pnw_palette}\NormalTok{(}\StringTok{"Cascades"}\NormalTok{,}\DecValTok{3}\NormalTok{)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{theme_classic}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Assignment-5_files/figure-latex/expository_plot_2.0-1.pdf}
+
+I wouldn't say this is the most beautiful thing that I have ever seen,
+but I think it's pretty good, especially for never making a violin plot
+before! The shape of the violin represents the total length of trout
+(mm), separated by sex, from each location. Sex is also reflected by the
+color of each violin. Green denotes females, yellow males, and white for
+NAs. The colors still appear distinct on the Color Blindness Simulator.
+
+\end{document}
